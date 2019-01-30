@@ -1,0 +1,43 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "1.0",
+        "theme": "dark",
+        "import": [],
+        "resources": [
+            {
+                "strings": {
+                    "skillName": "HelloAPL"
+                }
+            }
+        ],
+        "styles": {},
+        "layouts": {},
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "item": {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "Container",
+                        "justifyContent": "center",
+                        "height": "100vh",
+                        "item": {
+                            "type": "Text",
+                            "text": "${payload.hello.text}",
+                            "textAlign": "center",
+                            "fontSize": "5vh"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "dataSources": {
+        "hello": {
+            "text": "ハローAPL"
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "1.0",
+        "theme": "dark",
+        "import": [],
+        "resources": [],
+        "styles": {},
+        "layouts": {
+            "heeLayout": {
+                "parameters": [
+                    {
+                        "name": "imageUrl",
+                        "type": "string"
+                    }
+                ],
+                "items": [
+                    {
+                        "type": "Container",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "height": "100vh",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "scale": "best-fit",
+                                "height": "50vh",
+                                "width": "50vw",
+                                "align": "center",
+                                "source": "${imageUrl}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "Pager",
+                            "width": "100vw",
+                            "height": "100vh",
+                            "id": "myPager",
+                            "initialPage": 0,
+                            "items": [
+                                {
+                                    "type": "TouchWrapper",
+                                    "onPress": {
+                                        "type": "SendEvent",
+                                        "arguments": [
+                                            "touch"
+                                        ]
+                                    },
+                                    "item": {
+                                        "type": "heeLayout",
+                                        "imageUrl": "${payload.hello.hee_off}"
+                                    }
+                                },
+                                {
+                                    "type": "heeLayout",
+                                    "imageUrl": "${payload.hello.hee_on}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "height": "100vh",
+                            "position": "absolute",
+                            "alignItems": "center",
+                            "justifyContent": "end",
+                            "paddingBottom": "10vh",
+                            "items": {
+                                "type": "Text",
+                                "width": "100vw",
+                                "textAlign": "center",
+                                "text": "${payload.hello.myCount}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "dataSources": {
+        "hello": {
+            "hee_off": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png",
+            "hee_on": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png",
+            "myCount": 0
+        }
+    }
+}

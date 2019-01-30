@@ -1,0 +1,658 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>APLハンズオン</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="APLハンズオン"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="プロジェクトを作成する" duration="0">
+        <p>新規スキルのプロジェクトを作成します。こちらにアクセスしてください。</p>
+<p><a href="https://developer.amazon.com/ja/alexa-skills-kit" target="_blank">https://developer.amazon.com/ja/alexa-skills-kit</a></p>
+<h2>1-1. スキル開発を始めよう！</h2>
+<p>［スキル開発を始める］をクリックします。</p>
+<p><img alt="s100" src="img/7076f2e7ca25df9a.png"></p>
+<p>Amazonのアカウント情報を入力してログインします。</p>
+<p><img alt="s101" src="img/7204372d97c348a3.png"></p>
+<p>［スキルの作成］ボタンをクリックします。</p>
+<p><img alt="s102" src="img/5ddfa63749b9ab43.png"></p>
+<p>スキル名を入力して、［カスタム］と［Alexaがホスト］をそれぞれ選択します。<br><br>最後に［スキルを作成］ボタンをクリックします。</p>
+<p><img alt="s103" src="img/a5ba4c9c4efcb984.png"></p>
+<p>左側のメニューにある［呼び出し名］をクリックします。スキル名を「ハロー」に変更します。<br><br>必ず変更したら必ず［モデルを保存］と［モデルをビルド］をクリックします。</p>
+<p>※保存してビルドをしないと反映されないので注意しましょう！</p>
+<p><img alt="s104" src="img/a1213515ad087d6e.png"></p>
+<h2>1-2. シミュレーターで動かそう</h2>
+<p>Alexaは実機が無くても動作を確認することができます。<br><br>テストタブをクリックして、プルダウンメニューから［開発中］を選択します。</p>
+<p><img alt="s110" src="img/86ba3ac63a12adf1.png"></p>
+<p>これでシミュレーターの準備ができました。「ハローをひらいて」と入力して、スキルが動作することを確認します。<br><br>今は英語の文章が返ってくれば問題ありません。</p>
+<p><img alt="s111" src="img/bca8780aa2ad0d3e.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Alexa Presentation Languageに触れてみよう！" duration="0">
+        <p>いよいよAlexa Presentation Language（以降 APL）に触れていきたいと思います。<br><br>APLは2018年10月30日にパブリックベータ版として公開されました。</p>
+<p><a href="https://developer.amazon.com/ja/blogs/alexa/post/be1b08ef-fa61-4884-9e30-1d6ff6882dba/jp-alexa-presentation-language-publicbeta" target="_blank">https://developer.amazon.com/ja/blogs/alexa/post/be1b08ef-fa61-4884-9e30-1d6ff6882dba/jp-alexa-presentation-language-publicbeta</a></p>
+<p>簡単にAPLを解説するとEcho ShowやEcho Spotなどの画面付きスマートスピーカーに対してよりリッチな表現を実現するための新デザイン言語です。</p>
+<h2>2-1. APLを有効化</h2>
+<p>APLは初期状態では無効設定になっていますので、必ず使用する際は設定を有効にする必要があります。</p>
+<p>ビルドタブを押して元の画面に戻ります。</p>
+<p>左側のメニューの［インターフェース］をクリックして、<br><br>「Displayインターフェース」と「Alexa Presentation Language」のチェックを有効にします。<br><br>必ずこの2つを有効にしてください。</p>
+<p><img alt="s200" src="img/bc72be6781babb67.png"></p>
+<h2>2-2. APLに触れる</h2>
+<p>左側のメニューにある［画面表示］をクリックします。すると別の画面の画面が表示されます。<br>直接リンクから飛ぶこともできます。</p>
+<p><a href="https://developer.amazon.com/alexa/console/ask/displays" target="_blank">https://developer.amazon.com/alexa/console/ask/displays</a></p>
+<p><img alt="s210" src="img/45bc22961438c0d6.png"></p>
+<p>画面が表示されたら、［コードをアップロード］を選びます。<br><br>アップロードするコードはこちらからダウンロードしてください。</p>
+<p>https://drive.google.com/file/d/1ZJqYKRV6nvsbgkXOL0J05uaJeURKpxsy/view?usp=sharing</p>
+<p><img alt="s211" src="img/ed2c6ca1e2a30540.png"></p>
+<p>アップロードすると編集画面が表示されます。</p>
+<p><img alt="s212" src="img/5f92281403d7b01.png"></p>
+<h2>2-3. 文字を変えてみよう</h2>
+<p>「ハローAPL」と書かれている文字を違う文字に変えてみましょう。<br><br>編集方法は「JSONデータ」タブをクリックします。すると表示されている内容が変わります。「ハローAPL」と書かれている部分を好きな文字に変えてみましょう。</p>
+<p>するとリアルタイムで文字列が変更されます。</p>
+<p><img alt="s213" src="img/9595adff4067f4b0.png"></p>
+<h2>2-4. 背景画像を入れてみよう</h2>
+<p>背景が黒一色だと寂しいですね。レイアウト画面から<code>Image</code>を追加して、背景を実装してみましょう。</p>
+<p>レイアウト選択で一番最初にあるContainerをクリックして、［＋］ボタンをクリックします。</p>
+<p><img alt="s220" src="img/aec6d0af185728da.png"></p>
+<p>ポップアップが表示されるので、プルダウンメニューから<code>Image</code>を選択し、［typeを追加］ボタンをクリックします。</p>
+<p><img alt="s221" src="img/e5c99c61ca64611d.png"></p>
+<p><code>Image</code>をクリックして、コードを編集します。</p>
+<p><img alt="s222" src="img/1490eeb63c3f34d2.png"></p>
+<p>コードはこちらをコピペしてください。</p>
+<pre><code>{
+    &#34;type&#34;: &#34;Image&#34;,
+    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+    &#34;scale&#34;: &#34;best-fill&#34;,
+    &#34;width&#34;: &#34;100vw&#34;,
+    &#34;height&#34;: &#34;100vh&#34;,
+    &#34;position&#34;: &#34;absolute&#34;
+}
+</code></pre>
+<p>このままだと最初に表示した文字列が背景より後ろになってしまうので、表示順番を入れ替えます。<br><br>三部分をドラッグしてImageを上にもっていきます。</p>
+<p><img alt="s223" src="img/f25627f4e7382e0.png"></p>
+<p>これで文字が見えるようになりました。</p>
+<p><img alt="s224" src="img/878d321d2ef8ef36.png"></p>
+<h2>2-5. 背景色にオーバーレイカラーを載せる</h2>
+<p>このままだと文字が見えにくいので背景色にオーバーレイカラーを載せて、文字を見やすくしてみましょう。</p>
+<p>コードを書きのように修正してみましょう。<code>overlayColor</code>というプロパティを追加します。</p>
+<pre><code>{
+    &#34;type&#34;: &#34;Image&#34;,
+    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+    &#34;scale&#34;: &#34;best-fill&#34;,
+    &#34;width&#34;: &#34;100vw&#34;,
+    &#34;height&#34;: &#34;100vh&#34;,
+    &#34;position&#34;: &#34;absolute&#34;,
+    &#34;overlayColor&#34;: &#34;rgba(0, 0, 0, 0.6)&#34;
+}
+</code></pre>
+<p>これで文字が見やすくなりました。わざわざオーバーレイカラーの画像を作成しなくてもこのプロパティを追記するだけで簡単に作れます。</p>
+<p><img alt="s225" src="img/cfa4cf84dafb30bd.png"></p>
+<h2>2-6. デバイスの判定プロファイルを適用する</h2>
+<p>Echo Spotはこのレイアウト、Echo Showではこのレイアウトという風に、デバイスに応じてレイアウトを変更することがあるかと思います。</p>
+<p>デバイスの判定は<code>alexa-viewport-profiles</code>というものをインポートすると判定することができます。</p>
+<p><img alt="s230" src="img/6c4f38df3ded4880.png"></p>
+<p>コード</p>
+<pre><code>{
+    &#34;type&#34;: &#34;APL&#34;,
+    &#34;version&#34;: &#34;1.0&#34;,
+    &#34;theme&#34;: &#34;dark&#34;,
+    &#34;import&#34;: [
+        {
+            &#34;name&#34;: &#34;alexa-viewport-profiles&#34;,
+            &#34;version&#34;: &#34;1.0.0&#34;
+        }
+    ]
+}
+</code></pre>
+<h2>2-7. 小型デバイスレイアウトを追加する</h2>
+<p>小型デバイスのEcho Spot用のレイアウトを作ってみましょう。丸い形を活かしたデザインにします。<br><br>まず既にあるContainerを削除します。</p>
+<p><img alt="s240" src="img/78c841a6c6814140.png"></p>
+<p>出てきたポップアップで<code>Proceed</code>をクリックします。</p>
+<p><img alt="s241" src="img/b4d014470070d8a9.png"></p>
+<p>2つ目のContainerが消えました。新たにContainerを追加します。</p>
+<p><img alt="s242" src="img/d7ee2eb2e67d5d7f.png"></p>
+<p>出てきたポップアップで<code>Container</code>を選択して、［追加］ボタンをクリックします。</p>
+<p><img alt="s243" src="img/18bfda1e6fc310dd.png"></p>
+<p>もう１つ<code>Container</code>を追加します。</p>
+<p><img alt="s244" src="img/d5c4e1bec2086fc1.png"></p>
+<p>このように2つできればOKです。</p>
+<p><img alt="s245" src="img/1a0ee7f15a40d82.png"></p>
+<h2>2-8. 小型デバイスレイアウトを適用する</h2>
+<p>1つ目の<code>Container</code>を選択して、コードを編集します。</p>
+<p><img alt="s246" src="img/1d9b45610b4deceb.png"></p>
+<pre><code>{
+    &#34;when&#34;: &#34;${@viewportProfile == @hubRoundSmall}&#34;,
+    &#34;type&#34;: &#34;Container&#34;
+}
+</code></pre>
+<p>レイアウト判定は<code>when</code>プロパティを使います。<br><br>判定のプロパティ値は下記の通りです。</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>hubRoundSmall</p>
+</td><td colspan="1" rowspan="1"><p>小型デバイス（Echo Spot）</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>hubLandscapeMedium</p>
+</td><td colspan="1" rowspan="1"><p>中型デバイス（Echo Show 第１世代）</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>hubLandscapeLarge</p>
+</td><td colspan="1" rowspan="1"><p>大型デバイス（Echo Show 第２世代）</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>tvLandscapeXLarge</p>
+</td><td colspan="1" rowspan="1"><p>超大型TV（Fire TVなど）</p>
+</td></tr>
+</table>
+<p>2つ目の<code>Container</code>をクリックして<code>Image</code>を追加します。</p>
+<p><img alt="s247" src="img/23b034c746053b0a.png"></p>
+<p>コードを編集します。</p>
+<pre><code>{
+    &#34;type&#34;: &#34;Image&#34;,
+    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png&#34;,
+    &#34;scale&#34;: &#34;best-fill&#34;,
+    &#34;width&#34;: &#34;100vw&#34;,
+    &#34;height&#34;: &#34;100vh&#34;,
+    &#34;position&#34;: &#34;absolute&#34;
+}
+</code></pre>
+<p>2つ目の<code>Container</code>をクリックして更に<code>Container</code>を追加します。</p>
+<p><img alt="s248" src="img/e6e3277525218cfd.png"></p>
+<pre><code>{
+    &#34;type&#34;: &#34;Container&#34;,
+    &#34;justifyContent&#34;: &#34;center&#34;,
+    &#34;height&#34;: &#34;100vh&#34;
+}
+</code></pre>
+<p>追加した<code>Container</code>で更に<code>Text</code>を追加します。</p>
+<p><img alt="s249" src="img/a13e373a2bb0b9e8.png"></p>
+<pre><code>{
+    &#34;type&#34;: &#34;Text&#34;,
+    &#34;text&#34;: &#34;★&#34;,
+    &#34;textAlign&#34;: &#34;center&#34;,
+    &#34;fontSize&#34;: &#34;20vh&#34;
+}
+</code></pre>
+<h2>2-9. それ以外のレイアウトを適用する</h2>
+<p>追加した2つ目の<code>Container</code>をクリックして、<code>Image</code>を追加します。</p>
+<p><img alt="s250" src="img/9afd3426a5ae52e.png"></p>
+<pre><code>{
+    &#34;type&#34;: &#34;Image&#34;,
+    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+    &#34;scale&#34;: &#34;best-fill&#34;,
+    &#34;width&#34;: &#34;100vw&#34;,
+    &#34;height&#34;: &#34;100vh&#34;,
+    &#34;position&#34;: &#34;absolute&#34;,
+    &#34;overlayColor&#34;: &#34;rgba(0, 0, 0, 0.6)&#34;
+}
+</code></pre>
+<p><code>Container</code>を追加します。</p>
+<p><img alt="s251" src="img/ca46d2a6dc840efd.png"></p>
+<pre><code>{
+    &#34;type&#34;: &#34;Container&#34;,
+    &#34;justifyContent&#34;: &#34;center&#34;,
+    &#34;height&#34;: &#34;100vh&#34;
+}
+</code></pre>
+<p><img alt="s252" src="img/a8f647ad43642f03.png"></p>
+<pre><code>{
+    &#34;type&#34;: &#34;Text&#34;,
+    &#34;text&#34;: &#34;${payload.hello.text}&#34;,
+    &#34;textAlign&#34;: &#34;center&#34;,
+    &#34;fontSize&#34;: &#34;5vh&#34;
+}
+</code></pre>
+<p>最終的にこのようなレイアウトになれば完成です。</p>
+<p><img alt="s253" src="img/8b20b0dfb122f131.png"></p>
+<p>うまくいかない方はこちらからダウンロードしてファイルをインポートしてください。</p>
+<p>https://drive.google.com/file/d/1Rfpm21yesoM67hbD7ePwkv_JcNh_I-nu/view?usp=sharing</p>
+<h2>2-10. レイアウトを確認する</h2>
+<p>小型デバイスや中型デバイスに切り替えると適用したレイアウトに切り替わると思います。</p>
+<p><img alt="s260" src="img/dc1b2ed76716f1ae.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="APLをスキルから適用する" duration="0">
+        <p>これまで作ってきたAPLをスキルから呼び出してみましょう。<br><br>まずはコードを一旦書き出してみます。</p>
+<p><img alt="s300" src="img/d4d9dd4af654caee.png"></p>
+<p><code>apl_template_export.json</code>ファイルがダウンロードされますので開いてください。<br><br>document部分のみを選択してください。</p>
+<pre><code>{
+    &#34;document&#34;: {
+        ...
+    },
+    &#34;dataSources&#34;: {
+        ...
+    }
+}
+</code></pre>
+<h2>3-1. documentを新規作成する</h2>
+<p>コピーしたdocument部分をコピーしてデベロッパーコンソールのコードエディタから新規ドキュメントを作成します。</p>
+<p><img alt="s301" src="img/c4cff1654847231.png"></p>
+<p>ファイル名を<code>apl_document.json</code>として［Create File］ボタンをクリックします。</p>
+<p><img alt="s302" src="img/e3042af02c81b42b.png"></p>
+<p>先程コピーしたコードを貼り付けます。貼り付けたら［Save］ボタン押します。</p>
+<p><img alt="s303" src="img/f0ddeca3b70aa41c.png"></p>
+<p>コードはこちら</p>
+<pre><code>{
+    &#34;type&#34;: &#34;APL&#34;,
+    &#34;version&#34;: &#34;1.0&#34;,
+    &#34;theme&#34;: &#34;dark&#34;,
+    &#34;import&#34;: [
+        {
+            &#34;name&#34;: &#34;alexa-viewport-profiles&#34;,
+            &#34;version&#34;: &#34;1.0.0&#34;
+        }
+    ],
+    &#34;resources&#34;: [
+        {
+            &#34;strings&#34;: {
+                &#34;skillName&#34;: &#34;HelloAPL&#34;
+            }
+        }
+    ],
+    &#34;styles&#34;: {},
+    &#34;layouts&#34;: {},
+    &#34;mainTemplate&#34;: {
+        &#34;parameters&#34;: [
+            &#34;payload&#34;
+        ],
+        &#34;items&#34;: [
+            {
+                &#34;type&#34;: &#34;Container&#34;,
+                &#34;items&#34;: [
+                    {
+                        &#34;when&#34;: &#34;${@viewportProfile == @hubRoundSmall}&#34;,
+                        &#34;type&#34;: &#34;Container&#34;,
+                        &#34;items&#34;: [
+                            {
+                                &#34;type&#34;: &#34;Image&#34;,
+                                &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png&#34;,
+                                &#34;scale&#34;: &#34;best-fill&#34;,
+                                &#34;width&#34;: &#34;100vw&#34;,
+                                &#34;height&#34;: &#34;100vh&#34;,
+                                &#34;position&#34;: &#34;absolute&#34;
+                            },
+                            {
+                                &#34;type&#34;: &#34;Container&#34;,
+                                &#34;justifyContent&#34;: &#34;center&#34;,
+                                &#34;height&#34;: &#34;100vh&#34;,
+                                &#34;item&#34;: [
+                                    {
+                                        &#34;type&#34;: &#34;Text&#34;,
+                                        &#34;text&#34;: &#34;★&#34;,
+                                        &#34;textAlign&#34;: &#34;center&#34;,
+                                        &#34;fontSize&#34;: &#34;20vh&#34;
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        &#34;type&#34;: &#34;Container&#34;,
+                        &#34;items&#34;: [
+                            {
+                                &#34;type&#34;: &#34;Image&#34;,
+                                &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+                                &#34;scale&#34;: &#34;best-fill&#34;,
+                                &#34;width&#34;: &#34;100vw&#34;,
+                                &#34;height&#34;: &#34;100vh&#34;,
+                                &#34;position&#34;: &#34;absolute&#34;,
+                                &#34;overlayColor&#34;: &#34;rgba(0, 0, 0, 0.6)&#34;
+                            },
+                            {
+                                &#34;type&#34;: &#34;Container&#34;,
+                                &#34;justifyContent&#34;: &#34;center&#34;,
+                                &#34;height&#34;: &#34;100vh&#34;,
+                                &#34;item&#34;: [
+                                    {
+                                        &#34;type&#34;: &#34;Text&#34;,
+                                        &#34;text&#34;: &#34;${payload.hello.text}&#34;,
+                                        &#34;textAlign&#34;: &#34;center&#34;,
+                                        &#34;fontSize&#34;: &#34;5vh&#34;
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+</code></pre>
+<h2>3-2. スキルプログラムを編集する</h2>
+<p>既にあるindex.jsファイルを開きます。6行目にある<code>LaunchRequestHandler</code>の関数を編集します。<br>addDirectiveという部分でAPLのdocumentを指定します。<br><br>datasourcesに中型デバイスで表示する文字列を指定します。</p>
+<pre><code>const LaunchRequestHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === &#39;LaunchRequest&#39;;
+    },
+    handle(handlerInput) {
+        const speechText = &#39;ハローAPL&#39;;
+        // documentとdataをそれぞれ指定する
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .addDirective({
+                type : &#39;Alexa.Presentation.APL.RenderDocument&#39;,
+                version: &#39;1.0&#39;,
+                token: &#34;token&#34;,
+                document: require(&#39;./apl_document.json&#39;),
+                datasources: {
+                    &#34;hello&#34;: {
+                        &#34;text&#34;: &#34;ハローAPL&#34;
+                    }
+                }
+            })            
+            .getResponse();
+    }
+};
+</code></pre>
+<p>シミュレーターで実行するとAPLが適用されたレイアウトがシミュレーターで確認することができます。</p>
+<p><img alt="s305" src="img/b30c8749268d9a8c.png"></p>
+<p>実機で確認もしてみてください。<br>Echo Spotだとますますドラゴンボールっぽく見えますね</p>
+<p><img alt="s306" src="img/e08bde5ffaa4bf83.png"></p>
+<h2>3-3. Alexa-HostedのS3から画像を呼ぶ</h2>
+<p>Alexa-HostedにはS3も使えます。<br>コードエディタの左下にS3のリンクがあるのでクリックします。</p>
+<p><img alt="s310" src="img/9c580042d263fbc1.png"></p>
+<p>S3のページが表示されたら、画像をアップロードするので［アップロード］ボタンを押します。</p>
+<p><img alt="s311" src="img/5567efa80ecbd315.png"></p>
+<p>お好きな画像でも良いですし、こちらのball.pngファイルでも構いません。<br>好きなファイルをアップロードしましょう。</p>
+<p><img alt="s312" src="img/18a15706416bc995.png"></p>
+<p>apl_document.jsonを開いて、34行目のsourceの値を変更します。<br><code>${payload.hello.ballImage}</code>に変えてください。</p>
+<p><img alt="s313" src="img/d093a2519031ff71.png"></p>
+<p>index.jsも編集します。S3に保存している画像ファイルのURLを取得しましょう。</p>
+<p><img alt="s314" src="img/8d7605139424358f.png"></p>
+<p>下記のように編集します。</p>
+<pre><code>const Alexa = require(&#39;ask-sdk-core&#39;);
+const Util = require(&#39;util.js&#39;);
+
+const LaunchRequestHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === &#39;LaunchRequest&#39;;
+    },
+    handle(handlerInput) {
+        const speechText = &#39;ハローAPL&#39;;
+        const pictureUrl = Util.getS3PreSignedUrl(&#34;Media/ball.png&#34;);
+
+        // documentとdataをそれぞれ指定する
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .addDirective({
+                type : &#39;Alexa.Presentation.APL.RenderDocument&#39;,
+                version: &#39;1.0&#39;,
+                token: &#34;token&#34;,
+                document: require(&#39;./apl_document.json&#39;),
+                datasources: {
+                    &#34;hello&#34;: {
+                        &#34;text&#34;: &#34;ハローAPL&#34;,
+                        &#34;ballImage&#34;: pictureUrl
+                    }
+                }
+            })            
+            .getResponse();
+    }
+};
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="タッチ処理を実装しよう" duration="0">
+        <p>画面タッチ処理を実装します。タッチしたらイベントを検知して数をカウントする<br><br>昔流行った「へぇボタン」を作ります。</p>
+<p><img alt="s400" src="img/a39f7998d2909fbe.png"></p>
+<h2>4-1. インテントを追加する</h2>
+<p>へぇボタンの画面を表示させるために、インテントを新規作成します。<br><br>インテントの［追加］ボタンをクリックして、インテント名を<code>HeeIntent</code>と入力します。<br><br>作成ボタンをクリックして作成します。</p>
+<p><img alt="s401" src="img/34290358a08a1e98.png"></p>
+<p>このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、Enterキーを押してください。</p>
+<p>最後にインテントの保存とビルドボタンをそれぞれクリックします。</p>
+<p><img alt="s402" src="img/7bfb224e8592bb12.png"></p>
+<h2>4-2. APLを実装する</h2>
+<p>APLのレイアウトを組み込みます。コードエディタからファイルを新規作成してください。<br><br>ファイル名は「apl_hee.json」としました。</p>
+<p><img alt="s403" src="img/269beebcd42df1ca.png"></p>
+<pre><code>{
+    &#34;type&#34;: &#34;APL&#34;,
+    &#34;version&#34;: &#34;1.0&#34;,
+    &#34;theme&#34;: &#34;dark&#34;,
+    &#34;import&#34;: [],
+    &#34;resources&#34;: [],
+    &#34;styles&#34;: {},
+    &#34;layouts&#34;: {
+        &#34;heeLayout&#34;: {
+            &#34;parameters&#34;: [
+                {
+                    &#34;name&#34;: &#34;imageUrl&#34;,
+                    &#34;type&#34;: &#34;string&#34;
+                }
+            ],
+            &#34;items&#34;: [
+                {
+                    &#34;type&#34;: &#34;Container&#34;,
+                    &#34;alignItems&#34;: &#34;center&#34;,
+                    &#34;justifyContent&#34;: &#34;center&#34;,
+                    &#34;height&#34;: &#34;100vh&#34;,
+                    &#34;items&#34;: [
+                        {
+                            &#34;type&#34;: &#34;Image&#34;,
+                            &#34;scale&#34;: &#34;best-fit&#34;,
+                            &#34;height&#34;: &#34;50vh&#34;,
+                            &#34;width&#34;: &#34;50vw&#34;,
+                            &#34;align&#34;: &#34;center&#34;,
+                            &#34;source&#34;: &#34;${imageUrl}&#34;
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    &#34;mainTemplate&#34;: {
+        &#34;parameters&#34;: [&#34;payload&#34;],
+        &#34;items&#34;: [
+            {
+                &#34;type&#34;: &#34;Container&#34;,
+                &#34;items&#34;: [
+                    {
+                        &#34;type&#34;: &#34;Pager&#34;,
+                        &#34;width&#34;: &#34;100vw&#34;,
+                        &#34;height&#34;: &#34;100vh&#34;,
+                        &#34;id&#34;: &#34;myPager&#34;,
+                        &#34;initialPage&#34;: 0,
+                        &#34;items&#34;: [
+                            {
+                                &#34;type&#34;: &#34;TouchWrapper&#34;,
+                                &#34;onPress&#34;: {
+                                    &#34;type&#34;: &#34;SendEvent&#34;,
+                                    &#34;arguments&#34;: [
+                                        &#34;touch&#34;
+                                    ]
+                                },
+                                &#34;item&#34;: {
+                                    &#34;type&#34;: &#34;heeLayout&#34;,
+                                    &#34;imageUrl&#34;: &#34;${payload.hello.hee_off}&#34;
+                                }
+                            },
+                            {
+                                &#34;type&#34;: &#34;heeLayout&#34;,
+                                &#34;imageUrl&#34;: &#34;${payload.hello.hee_on}&#34;
+                            }
+                        ]
+                    },
+                    {
+                        &#34;type&#34;: &#34;Container&#34;,
+                        &#34;height&#34;: &#34;100vh&#34;,
+                        &#34;position&#34;:&#34;absolute&#34;,
+                        &#34;alignItems&#34;: &#34;center&#34;,
+                        &#34;justifyContent&#34;: &#34;end&#34;,
+                        &#34;paddingBottom&#34;: &#34;10vh&#34;,
+                        &#34;items&#34;: {
+                            &#34;type&#34;: &#34;Text&#34;,
+                            &#34;width&#34;: &#34;100vw&#34;,
+                            &#34;textAlign&#34;: &#34;center&#34;,
+                            &#34;text&#34;: &#34;${payload.hello.myCount}&#34;
+                        }                        
+                    }
+                ]
+            }
+        ]
+    }
+}
+</code></pre>
+<p>APLオーサリングツールでこのコードを貼り付けると以下のようになります。<br><code>heeLayout</code>とありますが、自分でオリジナルのレイアウトを適用することができます。</p>
+<p>※実際にオーサリングツールで試す場合はこちらのjsonファイルで試してください<br> https://drive.google.com/file/d/1Ofemlkh7dDV5p6h-TRb-Ri2pA903DTSV/view?usp=sharing</p>
+<p><br><img alt="s404" src="img/396a719e8b1e7946.png"></p>
+<p>typeの<code>Pager</code>で画面をスワイプするとへぇボタンのOFFとON画像が切り替わります。またOFF状態のへぇボタンをタッチできるように<code>TouchWrapper</code>を使います。</p>
+<h2>4-3. プログラムを修正する</h2>
+<p>APLを適用するためにindex.jsファイルを編集します。コードエディタからindex.jsを開いてください。</p>
+<p>コード量が多いので抜粋しています。全コードはこちらからダウンロードしてください。<br>https://drive.google.com/file/d/1Uze7kAqJ_wd8od5PVchgQXwE74cc32lL/view?usp=sharing</p>
+<p>※自分で編集される際は<code>addRequestHandlers</code>に関数を追加するのを忘れないようにしてください。</p>
+<pre><code>const HeeIntentHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === &#39;IntentRequest&#39;
+            &amp;&amp; handlerInput.requestEnvelope.request.intent.name === &#39;HeeIntent&#39;;
+    },
+    handle(handlerInput) {
+        const speechText = &#39;へぇ〜&#39;;
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .addDirective({
+                type : &#39;Alexa.Presentation.APL.RenderDocument&#39;,
+                version: &#39;1.0&#39;,
+                token: &#34;token&#34;,
+                document: require(&#39;./apl_hee.json&#39;),
+                datasources: {
+                    &#34;hello&#34;: {
+                        &#34;hee_off&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png&#34;,
+                        &#34;hee_on&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png&#34;,
+                        &#34;myCount&#34;: 0
+                    }
+                }
+            })            
+            .getResponse();
+    }
+};
+const TouchEventHandler = {
+    canHandle(handlerInput) {
+    return ((handlerInput.requestEnvelope.request.type === &#39;Alexa.Presentation.APL.UserEvent&#39; &amp;&amp;
+        (handlerInput.requestEnvelope.request.source.handler === &#39;Press&#39; || 
+        handlerInput.requestEnvelope.request.source.handler === &#39;onPress&#39;)));
+    },
+    handle(handlerInput) {
+        // セッション情報の取得
+        var myCount = 0;
+        const attributes = handlerInput.attributesManager.getSessionAttributes();
+        // 初期化
+        if(!attributes.counter){ 
+            myCount = 1;
+        } else {
+            myCount = attributes.counter;
+            myCount++;
+        }
+        attributes.counter = myCount;
+        handlerInput.attributesManager.setSessionAttributes(attributes);
+
+        const speechText = &#39;へぇ〜&#39;;
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .addDirective({
+                type : &#39;Alexa.Presentation.APL.ExecuteCommands&#39;,
+                token: &#34;token&#34;,
+                commands: [
+                    {
+                        type: &#34;Sequential&#34;,
+                        commands: [
+                            {
+                                &#34;type&#34;: &#34;SetPage&#34;,
+                                &#34;componentId&#34;: &#34;myPager&#34;,
+                                &#34;position&#34;: &#34;absolute&#34;,
+                                &#34;value&#34;: 1
+                            },
+                            {
+                                type: &#34;Idle&#34;,
+                                delay: 500
+                            },
+                            {
+                                &#34;type&#34;: &#34;SetPage&#34;,
+                                &#34;componentId&#34;: &#34;myPager&#34;,
+                                &#34;position&#34;: &#34;absolute&#34;,
+                                &#34;value&#34;: 0
+                            }
+                        ]
+                    }
+                ]
+            }) 
+            .addDirective({
+                type : &#39;Alexa.Presentation.APL.RenderDocument&#39;,
+                version: &#39;1.0&#39;,
+                token: &#34;token&#34;,
+                document: require(&#39;./apl_hee.json&#39;),
+                datasources: {
+                    &#34;hello&#34;: {
+                        &#34;hee_off&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png&#34;,
+                        &#34;hee_on&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png&#34;,
+                        &#34;myCount&#34;: myCount
+                    }
+                }
+            })
+            .getResponse();            
+    }
+};
+</code></pre>
+<h2>コード解説</h2>
+<p>画面タッチ処理はAPL側の<code>TouchWrapper</code>でトリガーされます。<br><br>タッチされたら、index.js側の<code>Alexa.Presentation.APL.UserEvent</code>が飛んでくるので、<code>Press</code>か<code>onPress</code>のどちらかで受け取ります。</p>
+<p><code>Alexa.Presentation.APL.ExecuteCommands</code>でAPLに対してコマンドを送っています。今回送っているコマンドは、シーケンス処理で、順番に処理を行っていくコマンドです。</p>
+<p><code>SetPage</code>のvalueで次のページを自動的に表示させています。<code>Idle</code>で500ミリ秒待ってから再度<code>SetPage</code>で一番最初のページを表示させています。</p>
+<p>最後にカウントを加算するためにAPLを再度読み込み直しています。</p>
+<h2>完成</h2>
+<p><img alt="s405" src="img/b8157f8248b0eb65.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

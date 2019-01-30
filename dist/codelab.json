@@ -1,0 +1,17 @@
+{
+  "environment": "web",
+  "source": "handson.md",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-01-29T17:55:34+09:00",
+  "id": "dist",
+  "duration": 0,
+  "title": "APLハンズオン",
+  "summary": "",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "dist"
+}

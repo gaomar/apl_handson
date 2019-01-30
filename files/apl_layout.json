@@ -1,0 +1,93 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "1.0",
+        "theme": "dark",
+        "import": [
+            {
+                "name": "alexa-viewport-profiles",
+                "version": "1.0.0"
+            }
+        ],
+        "resources": [
+            {
+                "strings": {
+                    "skillName": "HelloAPL"
+                }
+            }
+        ],
+        "styles": {},
+        "layouts": {},
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "when": "${@viewportProfile == @hubRoundSmall}",
+                            "type": "Container",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png",
+                                    "scale": "best-fill",
+                                    "width": "100vw",
+                                    "height": "100vh",
+                                    "position": "absolute"
+                                },
+                                {
+                                    "type": "Container",
+                                    "justifyContent": "center",
+                                    "height": "100vh",
+                                    "item": [
+                                        {
+                                            "type": "Text",
+                                            "text": "★",
+                                            "textAlign": "center",
+                                            "fontSize": "20vh"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg",
+                                    "scale": "best-fill",
+                                    "width": "100vw",
+                                    "height": "100vh",
+                                    "position": "absolute",
+                                    "overlayColor": "rgba(0, 0, 0, 0.6)"
+                                },
+                                {
+                                    "type": "Container",
+                                    "justifyContent": "center",
+                                    "height": "100vh",
+                                    "item": [
+                                        {
+                                            "type": "Text",
+                                            "text": "${payload.hello.text}",
+                                            "textAlign": "center",
+                                            "fontSize": "5vh"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "dataSources": {
+        "hello": {
+            "text": "ハローAPL"
+        }
+    }
+}
