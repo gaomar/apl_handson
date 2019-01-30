@@ -83,7 +83,7 @@ APLは初期状態では無効設定になっていますので、必ず使用�
 画面が表示されたら、［コードをアップロード］を選びます。  
 アップロードするコードはこちらからダウンロードしてください。
 
-https://drive.google.com/file/d/1ZJqYKRV6nvsbgkXOL0J05uaJeURKpxsy/view?usp=sharing
+[https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hello.json](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hello.json)
 
 ![s211](images/s211.png)
 
@@ -119,7 +119,7 @@ https://drive.google.com/file/d/1ZJqYKRV6nvsbgkXOL0J05uaJeURKpxsy/view?usp=shari
 ```javascript
 {
     "type": "Image",
-    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg",
+    "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
     "scale": "best-fill",
     "width": "100vw",
     "height": "100vh",
@@ -144,7 +144,7 @@ https://drive.google.com/file/d/1ZJqYKRV6nvsbgkXOL0J05uaJeURKpxsy/view?usp=shari
 ```javascript
 {
     "type": "Image",
-    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg",
+    "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
     "scale": "best-fill",
     "width": "100vw",
     "height": "100vh",
@@ -218,7 +218,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 }
 ```
 
-レイアウト判定は`when`プロパティを使います。  
+レイアウト判定は`when`プロパティを使います。whenはif文みたいなものです。  
 判定のプロパティ値は下記の通りです。
 
 | リソース   | 値    |
@@ -237,7 +237,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 ```javascript
 {
     "type": "Image",
-    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png",
+    "source": "https://github.com/gaomar/apl_handson/raw/master/files/ball.png",
     "scale": "best-fill",
     "width": "100vw",
     "height": "100vh",
@@ -278,7 +278,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 ```javascript
 {
     "type": "Image",
-    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg",
+    "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
     "scale": "best-fill",
     "width": "100vw",
     "height": "100vh",
@@ -316,7 +316,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 
 うまくいかない方はこちらからダウンロードしてファイルをインポートしてください。
 
-https://drive.google.com/file/d/1Rfpm21yesoM67hbD7ePwkv_JcNh_I-nu/view?usp=sharing
+[https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json)
 
 ### 2-10. レイアウトを確認する
 小型デバイスや中型デバイスに切り替えると適用したレイアウトに切り替わると思います。
@@ -344,7 +344,7 @@ document部分のみを選択してください。
 ```
 
 ### 3-1. documentを新規作成する
-コピーしたdocument部分をコピーしてデベロッパーコンソールのコードエディタから新規ドキュメントを作成します。
+document部分のみをコピーしてデベロッパーコンソールのコードエディタから新規ドキュメントを作成します。
 
 ![s301](images/s301.png)
 
@@ -356,7 +356,9 @@ document部分のみを選択してください。
 
 ![s303](images/s303.png)
 
-コードはこちら
+コードはこちら。
+[https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json)
+
 
 ```javascript
 {
@@ -392,7 +394,7 @@ document部分のみを選択してください。
                         "items": [
                             {
                                 "type": "Image",
-                                "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png",
+                                "source": "https://github.com/gaomar/apl_handson/raw/master/files/ball.png",
                                 "scale": "best-fill",
                                 "width": "100vw",
                                 "height": "100vh",
@@ -418,7 +420,7 @@ document部分のみを選択してください。
                         "items": [
                             {
                                 "type": "Image",
-                                "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg",
+                                "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
                                 "scale": "best-fill",
                                 "width": "100vw",
                                 "height": "100vh",
@@ -487,8 +489,8 @@ Echo Spotだとますますドラゴンボールっぽく見えますね
 
 ![s306](images/s306.png)
 
-### 3-3. Alexa-HostedのS3から画像を呼ぶ
-Alexa-HostedにはS3も使えます。
+### 3-3. Alexa-hostedのS3から画像を呼ぶ
+Alexa-hostedにはS3も使えます。
 コードエディタの左下にS3のリンクがあるのでクリックします。
 
 ![s310](images/s310.png)
@@ -545,6 +547,8 @@ const LaunchRequestHandler = {
 };
 ```
 
+これでAlexa-hostedのS3側にあるファイルから呼び出すことができました。
+
 ## タッチ処理を実装しよう
 画面タッチ処理を実装します。タッチしたらイベントを検知して数をカウントする  
 昔流行った「へぇボタン」を作ります。
@@ -558,7 +562,7 @@ const LaunchRequestHandler = {
 
 ![s401](images/s401.png)
 
-このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、Enterキーを押してください。
+このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、`Enter`キーを押してください。
 
 最後にインテントの保存とビルドボタンをそれぞれクリックします。
 
@@ -662,9 +666,9 @@ APLのレイアウトを組み込みます。コードエディタからファ�
 APLオーサリングツールでこのコードを貼り付けると以下のようになります。  
 `heeLayout`とありますが、自分でオリジナルのレイアウトを適用することができます。
 
- ※実際にオーサリングツールで試す場合はこちらのjsonファイルで試してください
- https://drive.google.com/file/d/1Ofemlkh7dDV5p6h-TRb-Ri2pA903DTSV/view?usp=sharing
- 
+ ※実際にAPLオーサリングツールで試す場合はこちらのjsonファイルで試してください
+[https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json)
+
  
 ![s404](images/s404.png)
 
@@ -674,7 +678,9 @@ typeの`Pager`で画面をスワイプするとへぇボタンのOFFとON画像�
 APLを適用するためにindex.jsファイルを編集します。コードエディタからindex.jsを開いてください。
 
 コード量が多いので抜粋しています。全コードはこちらからダウンロードしてください。
-https://drive.google.com/file/d/1Uze7kAqJ_wd8od5PVchgQXwE74cc32lL/view?usp=sharing
+
+[https://raw.githubusercontent.com/gaomar/apl_handson/master/files/index.js](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/index.js)
+
 
 ※自分で編集される際は`addRequestHandlers`に関数を追加するのを忘れないようにしてください。
 
@@ -695,8 +701,8 @@ const HeeIntentHandler = {
                 document: require('./apl_hee.json'),
                 datasources: {
                     "hello": {
-                        "hee_off": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png",
-                        "hee_on": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png",
+                        "hee_off": "https://github.com/gaomar/apl_handson/raw/master/files/hee_off.png",
+                        "hee_on": "https://github.com/gaomar/apl_handson/raw/master/files/hee_on.png",
                         "myCount": 0
                     }
                 }
@@ -761,8 +767,8 @@ const TouchEventHandler = {
                 document: require('./apl_hee.json'),
                 datasources: {
                     "hello": {
-                        "hee_off": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png",
-                        "hee_on": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png",
+                        "hee_off": "https://github.com/gaomar/apl_handson/raw/master/files/hee_off.png",
+                        "hee_on": "https://github.com/gaomar/apl_handson/raw/master/files/hee_on.png",
                         "myCount": myCount
                     }
                 }
@@ -785,3 +791,9 @@ const TouchEventHandler = {
 ### 完成
 
 ![s405](images/s405.png)
+
+早く終わった方は20へぇ到達で違う画像に切替えたり、0へぇに戻すというような処理を付け加えてみてはいかがでしょうか？
+
+### まとめ
+今回のハンズオンではたくさんあるAPL機能の一部です！  
+他にもたくさんの機能やテクニックがあるので、これを機にチャレンジしてみてください！

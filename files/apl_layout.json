@@ -32,7 +32,7 @@
                             "items": [
                                 {
                                     "type": "Image",
-                                    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png",
+                                    "source": "https://github.com/gaomar/apl_handson/raw/master/files/ball.png",
                                     "scale": "best-fill",
                                     "width": "100vw",
                                     "height": "100vh",
@@ -58,7 +58,7 @@
                             "items": [
                                 {
                                     "type": "Image",
-                                    "source": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg",
+                                    "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
                                     "scale": "best-fill",
                                     "width": "100vw",
                                     "height": "100vh",

@@ -46,8 +46,8 @@ const HeeIntentHandler = {
                 document: require('./apl_hee.json'),
                 datasources: {
                     "hello": {
-                        "hee_off": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png",
-                        "hee_on": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png",
+                        "hee_off": "https://github.com/gaomar/apl_handson/raw/master/files/hee_off.png",
+                        "hee_on": "https://github.com/gaomar/apl_handson/raw/master/files/hee_on.png",
                         "myCount": 0
                     }
                 }
@@ -112,8 +112,8 @@ const TouchEventHandler = {
                 document: require('./apl_hee.json'),
                 datasources: {
                     "hello": {
-                        "hee_off": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png",
-                        "hee_on": "https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png",
+                        "hee_off": "https://github.com/gaomar/apl_handson/raw/master/files/hee_off.png",
+                        "hee_on": "https://github.com/gaomar/apl_handson/raw/master/files/hee_on.png",
                         "myCount": myCount
                     }
                 }

@@ -60,9 +60,9 @@
 <h2>2-2. APLに触れる</h2>
 <p>左側のメニューにある［画面表示］をクリックします。すると別の画面の画面が表示されます。<br>直接リンクから飛ぶこともできます。</p>
 <p><a href="https://developer.amazon.com/alexa/console/ask/displays" target="_blank">https://developer.amazon.com/alexa/console/ask/displays</a></p>
-<p><img alt="s210" src="img/45bc22961438c0d6.png"></p>
+<p><img alt="s210" src="img/a5a41b274858382d.png"></p>
 <p>画面が表示されたら、［コードをアップロード］を選びます。<br><br>アップロードするコードはこちらからダウンロードしてください。</p>
-<p>https://drive.google.com/file/d/1ZJqYKRV6nvsbgkXOL0J05uaJeURKpxsy/view?usp=sharing</p>
+<p><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hello.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hello.json</a></p>
 <p><img alt="s211" src="img/ed2c6ca1e2a30540.png"></p>
 <p>アップロードすると編集画面が表示されます。</p>
 <p><img alt="s212" src="img/5f92281403d7b01.png"></p>
@@ -81,7 +81,7 @@
 <p>コードはこちらをコピペしてください。</p>
 <pre><code>{
     &#34;type&#34;: &#34;Image&#34;,
-    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+    &#34;source&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/background.jpg&#34;,
     &#34;scale&#34;: &#34;best-fill&#34;,
     &#34;width&#34;: &#34;100vw&#34;,
     &#34;height&#34;: &#34;100vh&#34;,
@@ -97,7 +97,7 @@
 <p>コードを書きのように修正してみましょう。<code>overlayColor</code>というプロパティを追加します。</p>
 <pre><code>{
     &#34;type&#34;: &#34;Image&#34;,
-    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+    &#34;source&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/background.jpg&#34;,
     &#34;scale&#34;: &#34;best-fill&#34;,
     &#34;width&#34;: &#34;100vw&#34;,
     &#34;height&#34;: &#34;100vh&#34;,
@@ -145,7 +145,7 @@
     &#34;type&#34;: &#34;Container&#34;
 }
 </code></pre>
-<p>レイアウト判定は<code>when</code>プロパティを使います。<br><br>判定のプロパティ値は下記の通りです。</p>
+<p>レイアウト判定は<code>when</code>プロパティを使います。whenはif文みたいなものです。<br><br>判定のプロパティ値は下記の通りです。</p>
 <table>
 <tr></tr>
 <tr><td colspan="1" rowspan="1"><p>hubRoundSmall</p>
@@ -166,7 +166,7 @@
 <p>コードを編集します。</p>
 <pre><code>{
     &#34;type&#34;: &#34;Image&#34;,
-    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png&#34;,
+    &#34;source&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/ball.png&#34;,
     &#34;scale&#34;: &#34;best-fill&#34;,
     &#34;width&#34;: &#34;100vw&#34;,
     &#34;height&#34;: &#34;100vh&#34;,
@@ -195,7 +195,7 @@
 <p><img alt="s250" src="img/9afd3426a5ae52e.png"></p>
 <pre><code>{
     &#34;type&#34;: &#34;Image&#34;,
-    &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+    &#34;source&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/background.jpg&#34;,
     &#34;scale&#34;: &#34;best-fill&#34;,
     &#34;width&#34;: &#34;100vw&#34;,
     &#34;height&#34;: &#34;100vh&#34;,
@@ -222,7 +222,7 @@
 <p>最終的にこのようなレイアウトになれば完成です。</p>
 <p><img alt="s253" src="img/8b20b0dfb122f131.png"></p>
 <p>うまくいかない方はこちらからダウンロードしてファイルをインポートしてください。</p>
-<p>https://drive.google.com/file/d/1Rfpm21yesoM67hbD7ePwkv_JcNh_I-nu/view?usp=sharing</p>
+<p><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json</a></p>
 <h2>2-10. レイアウトを確認する</h2>
 <p>小型デバイスや中型デバイスに切り替えると適用したレイアウトに切り替わると思います。</p>
 <p><img alt="s260" src="img/dc1b2ed76716f1ae.png"></p>
@@ -244,13 +244,13 @@
 }
 </code></pre>
 <h2>3-1. documentを新規作成する</h2>
-<p>コピーしたdocument部分をコピーしてデベロッパーコンソールのコードエディタから新規ドキュメントを作成します。</p>
+<p>document部分のみをコピーしてデベロッパーコンソールのコードエディタから新規ドキュメントを作成します。</p>
 <p><img alt="s301" src="img/c4cff1654847231.png"></p>
 <p>ファイル名を<code>apl_document.json</code>として［Create File］ボタンをクリックします。</p>
 <p><img alt="s302" src="img/e3042af02c81b42b.png"></p>
 <p>先程コピーしたコードを貼り付けます。貼り付けたら［Save］ボタン押します。</p>
 <p><img alt="s303" src="img/f0ddeca3b70aa41c.png"></p>
-<p>コードはこちら</p>
+<p>コードはこちら。<br><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json</a></p>
 <pre><code>{
     &#34;type&#34;: &#34;APL&#34;,
     &#34;version&#34;: &#34;1.0&#34;,
@@ -284,7 +284,7 @@
                         &#34;items&#34;: [
                             {
                                 &#34;type&#34;: &#34;Image&#34;,
-                                &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/ball.png&#34;,
+                                &#34;source&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/ball.png&#34;,
                                 &#34;scale&#34;: &#34;best-fill&#34;,
                                 &#34;width&#34;: &#34;100vw&#34;,
                                 &#34;height&#34;: &#34;100vh&#34;,
@@ -310,7 +310,7 @@
                         &#34;items&#34;: [
                             {
                                 &#34;type&#34;: &#34;Image&#34;,
-                                &#34;source&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/background.jpg&#34;,
+                                &#34;source&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/background.jpg&#34;,
                                 &#34;scale&#34;: &#34;best-fill&#34;,
                                 &#34;width&#34;: &#34;100vw&#34;,
                                 &#34;height&#34;: &#34;100vh&#34;,
@@ -368,9 +368,9 @@
 <p><img alt="s305" src="img/b30c8749268d9a8c.png"></p>
 <p>実機で確認もしてみてください。<br>Echo Spotだとますますドラゴンボールっぽく見えますね</p>
 <p><img alt="s306" src="img/e08bde5ffaa4bf83.png"></p>
-<h2>3-3. Alexa-HostedのS3から画像を呼ぶ</h2>
-<p>Alexa-HostedにはS3も使えます。<br>コードエディタの左下にS3のリンクがあるのでクリックします。</p>
-<p><img alt="s310" src="img/9c580042d263fbc1.png"></p>
+<h2>3-3. Alexa-hostedのS3から画像を呼ぶ</h2>
+<p>Alexa-hostedにはS3も使えます。<br>コードエディタの左下にS3のリンクがあるのでクリックします。</p>
+<p><img alt="s310" src="img/5debe1866386586f.png"></p>
 <p>S3のページが表示されたら、画像をアップロードするので［アップロード］ボタンを押します。</p>
 <p><img alt="s311" src="img/5567efa80ecbd315.png"></p>
 <p>お好きな画像でも良いですし、こちらのball.pngファイルでも構いません。<br>好きなファイルをアップロードしましょう。</p>
@@ -410,6 +410,7 @@ const LaunchRequestHandler = {
     }
 };
 </code></pre>
+<p>これでAlexa-hostedのS3側にあるファイルから呼び出すことができました。</p>
 
 
       </google-codelab-step>
@@ -420,7 +421,7 @@ const LaunchRequestHandler = {
 <h2>4-1. インテントを追加する</h2>
 <p>へぇボタンの画面を表示させるために、インテントを新規作成します。<br><br>インテントの［追加］ボタンをクリックして、インテント名を<code>HeeIntent</code>と入力します。<br><br>作成ボタンをクリックして作成します。</p>
 <p><img alt="s401" src="img/34290358a08a1e98.png"></p>
-<p>このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、Enterキーを押してください。</p>
+<p>このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、<code>Enter</code>キーを押してください。</p>
 <p>最後にインテントの保存とビルドボタンをそれぞれクリックします。</p>
 <p><img alt="s402" src="img/7bfb224e8592bb12.png"></p>
 <h2>4-2. APLを実装する</h2>
@@ -514,12 +515,13 @@ const LaunchRequestHandler = {
 }
 </code></pre>
 <p>APLオーサリングツールでこのコードを貼り付けると以下のようになります。<br><code>heeLayout</code>とありますが、自分でオリジナルのレイアウトを適用することができます。</p>
-<p>※実際にオーサリングツールで試す場合はこちらのjsonファイルで試してください<br> https://drive.google.com/file/d/1Ofemlkh7dDV5p6h-TRb-Ri2pA903DTSV/view?usp=sharing</p>
+<p>※実際にAPLオーサリングツールで試す場合はこちらのjsonファイルで試してください<br><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json</a></p>
 <p><br><img alt="s404" src="img/396a719e8b1e7946.png"></p>
 <p>typeの<code>Pager</code>で画面をスワイプするとへぇボタンのOFFとON画像が切り替わります。またOFF状態のへぇボタンをタッチできるように<code>TouchWrapper</code>を使います。</p>
 <h2>4-3. プログラムを修正する</h2>
 <p>APLを適用するためにindex.jsファイルを編集します。コードエディタからindex.jsを開いてください。</p>
-<p>コード量が多いので抜粋しています。全コードはこちらからダウンロードしてください。<br>https://drive.google.com/file/d/1Uze7kAqJ_wd8od5PVchgQXwE74cc32lL/view?usp=sharing</p>
+<p>コード量が多いので抜粋しています。全コードはこちらからダウンロードしてください。</p>
+<p><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/index.js" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/index.js</a></p>
 <p>※自分で編集される際は<code>addRequestHandlers</code>に関数を追加するのを忘れないようにしてください。</p>
 <pre><code>const HeeIntentHandler = {
     canHandle(handlerInput) {
@@ -537,8 +539,8 @@ const LaunchRequestHandler = {
                 document: require(&#39;./apl_hee.json&#39;),
                 datasources: {
                     &#34;hello&#34;: {
-                        &#34;hee_off&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png&#34;,
-                        &#34;hee_on&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png&#34;,
+                        &#34;hee_off&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/hee_off.png&#34;,
+                        &#34;hee_on&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/hee_on.png&#34;,
                         &#34;myCount&#34;: 0
                     }
                 }
@@ -603,8 +605,8 @@ const TouchEventHandler = {
                 document: require(&#39;./apl_hee.json&#39;),
                 datasources: {
                     &#34;hello&#34;: {
-                        &#34;hee_off&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_off.png&#34;,
-                        &#34;hee_on&#34;: &#34;https://s3-ap-northeast-1.amazonaws.com/gaomar-handson-apl/hee_on.png&#34;,
+                        &#34;hee_off&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/hee_off.png&#34;,
+                        &#34;hee_on&#34;: &#34;https://github.com/gaomar/apl_handson/raw/master/files/hee_on.png&#34;,
                         &#34;myCount&#34;: myCount
                     }
                 }
@@ -620,6 +622,9 @@ const TouchEventHandler = {
 <p>最後にカウントを加算するためにAPLを再度読み込み直しています。</p>
 <h2>完成</h2>
 <p><img alt="s405" src="img/b8157f8248b0eb65.png"></p>
+<p>早く終わった方は20へぇ到達で違う画像に切替えたり、0へぇに戻すというような処理を付け加えてみてはいかがでしょうか？</p>
+<h2>まとめ</h2>
+<p>今回のハンズオンではたくさんあるAPL機能の一部です！<br><br>他にもたくさんの機能やテクニックがあるので、これを機にチャレンジしてみてください！</p>
 
 
       </google-codelab-step>
