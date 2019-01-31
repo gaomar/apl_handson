@@ -16,7 +16,7 @@ id: dist
 [https://developer.amazon.com/ja/alexa-skills-kit](https://developer.amazon.com/ja/alexa-skills-kit
 )
 
-### 1-1. スキル開発を始めよう！
+### 1-1. スキル開発を始めよう！
 ［スキル開発を始める］をクリックします。
 
 ![s100](images/s100.png)
@@ -29,13 +29,13 @@ Amazonのアカウント情報を入力してログインします。
 
 ![s102](images/s102.png)
 
-スキル名を入力して、［カスタム］と［Alexaがホスト］をそれぞれ選択します。  
+スキル名を入力して、［カスタム］と［Alexaがホスト］をそれぞれ選択します。  
 最後に［スキルを作成］ボタンをクリックします。
 
 ![s103](images/s103.png)
 
 左側のメニューにある［呼び出し名］をクリックします。スキル名を「ハロー」に変更します。  
-必ず変更したら必ず［モデルを保存］と［モデルをビルド］をクリックします。
+必ず変更したら必ず［モデルを保存］と［モデルをビルド］をクリックします。
 
 ※保存してビルドをしないと反映されないので注意しましょう！
 
@@ -53,7 +53,7 @@ Alexaは実機が無くても動作を確認することができます。
 ![s111](images/s111.png)
 
 ## Alexa Presentation Languageに触れてみよう！
-いよいよAlexa Presentation Language（以降 APL）に触れていきたいと思います。  
+いよいよAlexa Presentation Language（以降 APL）に触れていきたいと思います。  
 APLは2018年10月30日にパブリックベータ版として公開されました。
 
 [https://developer.amazon.com/ja/blogs/alexa/post/be1b08ef-fa61-4884-9e30-1d6ff6882dba/jp-alexa-presentation-language-publicbeta](https://developer.amazon.com/ja/blogs/alexa/post/be1b08ef-fa61-4884-9e30-1d6ff6882dba/jp-alexa-presentation-language-publicbeta
@@ -67,7 +67,7 @@ APLは初期状態では無効設定になっていますので、必ず使用�
 ビルドタブを押して元の画面に戻ります。  
 
 左側のメニューの［インターフェース］をクリックして、  
-「Displayインターフェース」と「Alexa Presentation Language」のチェックを有効にします。  
+「Displayインターフェース」と「Alexa Presentation Language」のチェックを有効にします。  
 必ずこの2つを有効にしてください。
 
 ![s200](images/s200.png)
@@ -93,7 +93,7 @@ APLは初期状態では無効設定になっていますので、必ず使用�
 
 ### 2-3. 文字を変えてみよう
 「ハローAPL」と書かれている文字を違う文字に変えてみましょう。  
-編集方法は「JSONデータ」タブをクリックします。すると表示されている内容が変わります。「ハローAPL」と書かれている部分を好きな文字に変えてみましょう。
+編集方法は「JSONデータ」タブをクリックします。すると表示されている内容が変わります。「ハローAPL」と書かれている部分を好きな文字に変えてみましょう。
 
 するとリアルタイムで文字列が変更されます。
 
@@ -102,7 +102,7 @@ APLは初期状態では無効設定になっていますので、必ず使用�
 ### 2-4. 背景画像を入れてみよう
 背景が黒一色だと寂しいですね。レイアウト画面から`Image`を追加して、背景を実装してみましょう。
 
-レイアウト選択で一番最初にあるContainerをクリックして、［＋］ボタンをクリックします。
+レイアウト選択で一番最初にあるContainerをクリックして、［＋］ボタンをクリックします。
 
 ![s220](images/s220.png)
 
@@ -153,11 +153,11 @@ APLは初期状態では無効設定になっていますので、必ず使用�
 }
 ```
 
-これで文字が見やすくなりました。わざわざオーバーレイカラーの画像を作成しなくてもこのプロパティを追記するだけで簡単に作れます。
+これで文字が見やすくなりました。わざわざオーバーレイカラーの画像を作成しなくてもこのプロパティを追記するだけで簡単に作れます。
 
 ![s225](images/s225.png)
 
-### 2-6. デバイスの判定プロファイルを適用する
+### 2-6. デバイスの判定プロファイルを適用する
 Echo Spotはこのレイアウト、Echo Showではこのレイアウトという風に、デバイスに応じてレイアウトを変更することがあるかと思います。
 
 デバイスの判定は`alexa-viewport-profiles`というものをインポートすると判定することができます。
@@ -181,7 +181,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 ```
 
 ### 2-7. 小型デバイスレイアウトを追加する
-小型デバイスのEcho Spot用のレイアウトを作ってみましょう。丸い形を活かしたデザインにします。  
+小型デバイスのEcho Spot用のレイアウトを作ってみましょう。丸い形を活かしたデザインにします。  
 まず既にあるContainerを削除します。
 
 ![s240](images/s240.png)
@@ -194,7 +194,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 
 ![s242](images/s242.png)
 
-出てきたポップアップで`Container`を選択して、［追加］ボタンをクリックします。
+出てきたポップアップで`Container`を選択して、［追加］ボタンをクリックします。
 
 ![s243](images/s243.png)
 
@@ -207,7 +207,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 ![s245](images/s245.png)
 
 ### 2-8. 小型デバイスレイアウトを適用する
-1つ目の`Container`を選択して、コードを編集します。
+1つ目の`Container`を選択して、コードを編集します。
 
 ![s246](images/s246.png)
 
@@ -228,7 +228,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 | hubLandscapeLarge |    大型デバイス（Echo Show 第２世代）        |
 | tvLandscapeXLarge |    超大型TV（Fire TVなど）        |
 
-2つ目の`Container`をクリックして`Image`を追加します。
+2つ目の`Container`をクリックして`Image`を追加します。
 
 ![s247](images/s247.png)
 
@@ -259,7 +259,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 
 追加した`Container`で更に`Text`を追加します。
 
-![s249](images/s249.png)
+![s249](images/s249.png)
 
 ```javascript
 {
@@ -344,7 +344,7 @@ document部分のみを選択してください。
 ```
 
 ### 3-1. documentを新規作成する
-document部分のみをコピーしてデベロッパーコンソールの［コードエディタ］タブをクリックしてから左上の新規ドキュメントアイコンをクリックして作成します。
+document部分のみをコピーしてデベロッパーコンソールの［コードエディタ］タブをクリックしてから左上の新規ドキュメントアイコンをクリックして作成します。
 
 ![s301](images/s301.png)
 
@@ -357,7 +357,7 @@ document部分のみをコピーしてデベロッパーコンソールの［コ
 ![s303](images/s303.png)
 
 コードはこちら。
-[https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json)
+[https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json)
 
 
 ```javascript
@@ -491,7 +491,7 @@ Echo Spotだとますますドラゴ◯ボールっぽく見えますね
 
 ### 3-3. Alexa-hostedのS3から画像を呼ぶ
 Alexa-hostedにはS3も使えます。
-コードエディタの左下にS3のリンクがあるのでクリックします。
+コードエディタの左下にS3のリンクがあるのでクリックします。
 
 ![s310](images/s310.png)
 
@@ -499,7 +499,7 @@ S3のページが表示されたら、画像をアップロードするので［
 
 ![s311](images/s311.png)
 
-お好きな画像でも良いですし、こちらのball.pngファイルでも構いません。
+お好きな画像でも良いですし、こちらのball.pngファイルでも構いません。
 好きなファイルをアップロードしましょう。
 
 ![s312](images/s312.png)
@@ -547,29 +547,29 @@ const LaunchRequestHandler = {
 };
 ```
 
-これでAlexa-hostedのS3側にあるファイルから呼び出すことができました。
+これでAlexa-hostedのS3側にあるファイルから呼び出すことができました。
 
 ## タッチ処理を実装しよう
-画面タッチ処理を実装します。タッチしたらイベントを検知して数をカウントする  
+画面タッチ処理を実装します。タッチしたらイベントを検知して数をカウントする  
 昔流行った「へぇボタン」を作ります。
 
 ![s400](images/s400.png)
 
 ### 4-1. インテントを追加する
 へぇボタンの画面を表示させるために、インテントを新規作成します。  
-［ビルド］タブをクリックして、インテントの［追加］ボタンをクリックして、インテント名を`HeeIntent`と入力します。［カスタムインテントを作成］ボタンをクリックして作成します。
+［ビルド］タブをクリックして、インテントの［追加］ボタンをクリックして、インテント名を`HeeIntent`と入力します。［カスタムインテントを作成］ボタンをクリックして作成します。
 
 ![s401](images/s401.png)
 
-このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、`Enter`キーを押してください。
+このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、`Enter`キーを押してください。
 
 最後に必ずインテントの［モデルを保存］ボタンと［モデルをビルド］ボタンをそれぞれクリックします。
 
 ![s402](images/s402.png)
 
-### 4-2. APLを実装する
+### 4-2. APLを実装する
 APLのレイアウトを組み込みます。［コードエディタ］タブをクリックしてから、左上の新規ドキュメントアイコンをクリックして作成してください。  
-ファイル名は「apl_hee.json」としました。
+ファイル名は「apl_hee.json」としました。
 
 ![s403](images/s403.png)
 
@@ -664,13 +664,13 @@ APLのレイアウトを組み込みます。［コードエディタ］タブ�
 }
 ```
 
-[APLオーサリングツール](https://developer.amazon.com/alexa/console/ask/displays)でこのコードを貼り付けると以下のようになります。  
-`heeLayout`とありますが、自分でオリジナルのレイアウトを適用することができます。
+[APLオーサリングツール](https://developer.amazon.com/alexa/console/ask/displays)でこのコードを貼り付けると以下のようになります。  
+`heeLayout`とありますが、自分でオリジナルのレイアウトを適用することができます。
 
- ※実際にAPLオーサリングツールで試す場合はこちらのjsonファイルで試してください
+ ※実際にAPLオーサリングツールで試す場合はこちらのjsonファイルで試してください
 [https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json](https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json)
 
- 
+ 
 ![s404](images/s404.png)
 
 typeの`Pager`で画面をスワイプするとへぇボタンのOFFとON画像が切り替わります。またOFF状態のへぇボタンをタッチできるように`TouchWrapper`を使います。
@@ -780,14 +780,14 @@ const TouchEventHandler = {
 ```
 
 ### コード解説
-画面タッチ処理はAPL側の`TouchWrapper`でトリガーされます。  
+画面タッチ処理はAPL側の`TouchWrapper`でトリガーされます。  
 タッチされたら、index.js側の`Alexa.Presentation.APL.UserEvent`が飛んでくるので、`Press`か`onPress`のどちらかで受け取ります。
 
-`Alexa.Presentation.APL.ExecuteCommands`でAPLに対してコマンドを送っています。今回送っているコマンドは、シーケンス処理で、順番に処理を行っていくコマンドです。
+`Alexa.Presentation.APL.ExecuteCommands`でAPLに対してコマンドを送っています。今回送っているコマンドは、シーケンス処理で、順番に処理を行っていくコマンドです。
 
 `SetPage`のvalueで次のページを自動的に表示させています。`Idle`で500ミリ秒待ってから再度`SetPage`で一番最初のページを表示させています。
 
-最後にカウントを加算するためにAPLを再度読み込み直しています。
+最後にカウントを加算するためにAPLを再度読み込み直しています。
 
 ### 完成
 
