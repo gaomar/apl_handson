@@ -77,7 +77,7 @@
 <p>ポップアップが表示されるので、プルダウンメニューから<code>Image</code>を選択し、［typeを追加］ボタンをクリックします。</p>
 <p><img alt="s221" src="img/e5c99c61ca64611d.png"></p>
 <p><code>Image</code>をクリックして、コードを編集します。</p>
-<p><img alt="s222" src="img/1490eeb63c3f34d2.png"></p>
+<p><img alt="s222" src="img/95e2d9c49cbcce21.png"></p>
 <p>コードはこちらをコピペしてください。</p>
 <pre><code>{
     &#34;type&#34;: &#34;Image&#34;,
@@ -91,7 +91,7 @@
 <p>このままだと最初に表示した文字列が背景より後ろになってしまうので、表示順番を入れ替えます。<br><br>三部分をドラッグしてImageを上にもっていきます。</p>
 <p><img alt="s223" src="img/f25627f4e7382e0.png"></p>
 <p>これで文字が見えるようになりました。</p>
-<p><img alt="s224" src="img/878d321d2ef8ef36.png"></p>
+<p><img alt="s224" src="img/fc05ed45964c3f38.png"></p>
 <h2>2-5. 背景色にオーバーレイカラーを載せる</h2>
 <p>このままだと文字が見えにくいので背景色にオーバーレイカラーを載せて、文字を見やすくしてみましょう。</p>
 <p>コードを書きのように修正してみましょう。<code>overlayColor</code>というプロパティを追加します。</p>
@@ -106,7 +106,7 @@
 }
 </code></pre>
 <p>これで文字が見やすくなりました。わざわざオーバーレイカラーの画像を作成しなくてもこのプロパティを追記するだけで簡単に作れます。</p>
-<p><img alt="s225" src="img/cfa4cf84dafb30bd.png"></p>
+<p><img alt="s225" src="img/63d60a696e1cd6fb.png"></p>
 <h2>2-6. デバイスの判定プロファイルを適用する</h2>
 <p>Echo Spotはこのレイアウト、Echo Showではこのレイアウトという風に、デバイスに応じてレイアウトを変更することがあるかと思います。</p>
 <p>デバイスの判定は<code>alexa-viewport-profiles</code>というものをインポートすると判定することができます。</p>
@@ -225,14 +225,14 @@
 <p><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json</a></p>
 <h2>2-10. レイアウトを確認する</h2>
 <p>小型デバイスや中型デバイスに切り替えると適用したレイアウトに切り替わると思います。</p>
-<p><img alt="s260" src="img/dc1b2ed76716f1ae.png"></p>
+<p><img alt="s260" src="img/c580960c7d583af.png"></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="APLをスキルから適用する" duration="0">
         <p>これまで作ってきたAPLをスキルから呼び出してみましょう。<br><br>まずはコードを一旦書き出してみます。</p>
-<p><img alt="s300" src="img/d4d9dd4af654caee.png"></p>
+<p><img alt="s300" src="img/8a25b4ddbe875c1e.png"></p>
 <p><code>apl_template_export.json</code>ファイルがダウンロードされますので開いてください。<br><br>document部分のみを選択してください。</p>
 <pre><code>{
     &#34;document&#34;: {
@@ -244,7 +244,7 @@
 }
 </code></pre>
 <h2>3-1. documentを新規作成する</h2>
-<p>document部分のみをコピーしてデベロッパーコンソールのコードエディタから新規ドキュメントを作成します。</p>
+<p>document部分のみをコピーしてデベロッパーコンソールの［コードエディタ］タブをクリックしてから左上の新規ドキュメントアイコンをクリックして作成します。</p>
 <p><img alt="s301" src="img/c4cff1654847231.png"></p>
 <p>ファイル名を<code>apl_document.json</code>として［Create File］ボタンをクリックします。</p>
 <p><img alt="s302" src="img/e3042af02c81b42b.png"></p>
@@ -364,9 +364,9 @@
     }
 };
 </code></pre>
-<p>シミュレーターで実行するとAPLが適用されたレイアウトがシミュレーターで確認することができます。</p>
-<p><img alt="s305" src="img/b30c8749268d9a8c.png"></p>
-<p>実機で確認もしてみてください。<br>Echo Spotだとますますドラゴンボールっぽく見えますね</p>
+<p>［テスト］タブをクリックしてシミュレーター画面を表示してください。シミュレーターで実行するとAPLが適用されたレイアウトを確認することができます。</p>
+<p><img alt="s305" src="img/f9de7e06411cdf9f.png"></p>
+<p>実機で確認もしてみてください。<br>Echo Spotだとますますドラゴ◯ボールっぽく見えますね</p>
 <p><img alt="s306" src="img/e08bde5ffaa4bf83.png"></p>
 <h2>3-3. Alexa-hostedのS3から画像を呼ぶ</h2>
 <p>Alexa-hostedにはS3も使えます。<br>コードエディタの左下にS3のリンクがあるのでクリックします。</p>
@@ -419,14 +419,15 @@ const LaunchRequestHandler = {
         <p>画面タッチ処理を実装します。タッチしたらイベントを検知して数をカウントする<br><br>昔流行った「へぇボタン」を作ります。</p>
 <p><img alt="s400" src="img/a39f7998d2909fbe.png"></p>
 <h2>4-1. インテントを追加する</h2>
-<p>へぇボタンの画面を表示させるために、インテントを新規作成します。<br><br>インテントの［追加］ボタンをクリックして、インテント名を<code>HeeIntent</code>と入力します。<br><br>作成ボタンをクリックして作成します。</p>
+<p>へぇボタンの画面を表示させるために、インテントを新規作成します。<br><br>［ビルド］タブをクリックして、インテントの［追加］ボタンをクリックして、インテント名を<code>HeeIntent</code>と入力します。［カスタムインテントを作成］ボタンをクリックして作成します。</p>
 <p><img alt="s401" src="img/34290358a08a1e98.png"></p>
 <p>このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、<code>Enter</code>キーを押してください。</p>
-<p>最後にインテントの保存とビルドボタンをそれぞれクリックします。</p>
+<p>最後に必ずインテントの［モデルを保存］ボタンと［モデルをビルド］ボタンをそれぞれクリックします。</p>
 <p><img alt="s402" src="img/7bfb224e8592bb12.png"></p>
 <h2>4-2. APLを実装する</h2>
-<p>APLのレイアウトを組み込みます。コードエディタからファイルを新規作成してください。<br><br>ファイル名は「apl_hee.json」としました。</p>
+<p>APLのレイアウトを組み込みます。［コードエディタ］タブをクリックしてから、左上の新規ドキュメントアイコンをクリックして作成してください。<br><br>ファイル名は「apl_hee.json」としました。</p>
 <p><img alt="s403" src="img/269beebcd42df1ca.png"></p>
+<p>コードは下記の通りです。</p>
 <pre><code>{
     &#34;type&#34;: &#34;APL&#34;,
     &#34;version&#34;: &#34;1.0&#34;,
@@ -514,7 +515,7 @@ const LaunchRequestHandler = {
     }
 }
 </code></pre>
-<p>APLオーサリングツールでこのコードを貼り付けると以下のようになります。<br><code>heeLayout</code>とありますが、自分でオリジナルのレイアウトを適用することができます。</p>
+<p><a href="https://developer.amazon.com/alexa/console/ask/displays" target="_blank">APLオーサリングツール</a>でこのコードを貼り付けると以下のようになります。<br><code>heeLayout</code>とありますが、自分でオリジナルのレイアウトを適用することができます。</p>
 <p>※実際にAPLオーサリングツールで試す場合はこちらのjsonファイルで試してください<br><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json</a></p>
 <p><br><img alt="s404" src="img/396a719e8b1e7946.png"></p>
 <p>typeの<code>Pager</code>で画面をスワイプするとへぇボタンのOFFとON画像が切り替わります。またOFF状態のへぇボタンをタッチできるように<code>TouchWrapper</code>を使います。</p>
