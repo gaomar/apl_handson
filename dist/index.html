@@ -97,7 +97,7 @@
 </td></tr>
 </table>
 <p>このままだと最初に表示した文字列が背景より後ろになってしまうので、表示順番を入れ替えます。<br><br>三部分をドラッグしてImageを上にもっていきます。</p>
-<p><img alt="s223" src="img/f25627f4e7382e0.png"></p>
+<p><img alt="s223" src="img/809c0c6c48395ed1.png"></p>
 <p>これで文字が見えるようになりました。</p>
 <p><img alt="s224" src="img/1db804357466e10a.png"></p>
 <h2>2-5. 背景色にオーバーレイカラーを載せる</h2>
@@ -114,7 +114,7 @@
 <h2>2-6. デバイスの判定プロファイルを適用する</h2>
 <p>Echo Spotはこのレイアウト、Echo Showではこのレイアウトという風に、デバイスに応じてレイアウトを変更することがあるかと思います。</p>
 <p>デバイスの判定は<code>alexa-viewport-profiles</code>というものをインポートすると判定することができます。</p>
-<p><img alt="s230" src="img/292ac603946122e5.png"></p>
+<p><img alt="s230" src="img/48e2849f089fa81f.png"></p>
 <p>コード</p>
 <pre><code>{
     &#34;type&#34;: &#34;APL&#34;,
@@ -130,19 +130,19 @@
 </code></pre>
 <h2>2-7. 小型デバイスレイアウトを追加する</h2>
 <p>小型デバイスのEcho Spot用のレイアウトを作ってみましょう。丸い形を活かしたデザインにします。<br><br>既にある<code>Image</code>を削除します。</p>
-<p><img alt="s240" src="img/7425f89cf109af45.png"></p>
+<p><img alt="s240" src="img/1e937b1855751ad5.png"></p>
 <p>出てきたポップアップで<code>Proceed</code>をクリックします。</p>
-<p><img alt="s241" src="img/b4d014470070d8a9.png"></p>
+<p><img alt="s241" src="img/1d3bd1b8e1ea340d.png"></p>
 <p>次に2つ目の<code>Container</code>を選択して、ゴミ箱をクリックして削除します。</p>
-<p><img alt="s242" src="img/3574338ab58d3c7a.png"></p>
+<p><img alt="s242" src="img/f8d296feb6b589cd.png"></p>
 <p><code>Container</code>を選択して［+］ボタンをクリックします。</p>
-<p><img alt="s242-1" src="img/d7ee2eb2e67d5d7f.png"></p>
+<p><img alt="s242-1" src="img/504f689779da0936.png"></p>
 <p>出てきたポップアップで<code>Container</code>を選択して、［追加］ボタンをクリックします。</p>
-<p><img alt="s243" src="img/18bfda1e6fc310dd.png"></p>
+<p><img alt="s243" src="img/38c87356ad7eb036.png"></p>
 <p>もう１つ<code>Container</code>を追加します。</p>
-<p><img alt="s244" src="img/d5c4e1bec2086fc1.png"></p>
+<p><img alt="s244" src="img/add16a76de8a17fa.png"></p>
 <p>このように2つできればOKです。</p>
-<p><img alt="s245" src="img/1a0ee7f15a40d82.png"></p>
+<p><img alt="s245" src="img/89a3cc26f81a5aef.png"></p>
 <h2>2-8. 小型デバイスレイアウトを適用する</h2>
 <p>追加した1つ目の<code>Container</code>を選択して、whenプロパティに値を設定します。</p>
 <table>
@@ -273,23 +273,23 @@
 <p><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_layout.json</a></p>
 <h2>2-10. レイアウトを確認する</h2>
 <p>小型デバイスや中型デバイスに切り替えると適用したレイアウトに切り替わると思います。</p>
-<p><img alt="s260" src="img/a9972c98433c0e3.png"></p>
+<p><img alt="s260" src="img/3f93d8f78baef063.png"></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="APLをスキルから適用する" duration="0">
         <p>これまで作ってきたAPLをスキルから呼び出してみましょう。<br><br>まずはコードを一旦書き出してみます。右上にある［コード書き出し］ボタンをクリックしてダウンロードできます。</p>
-<p><img alt="s300" src="img/f2220a157c3acdca.png"></p>
+<p><img alt="s300" src="img/752dd8ad2f1a6d83.png"></p>
 <p><code>apl_template_export.json</code>ファイルがダウンロードされますので開いてください。<br><br>document部分のみを選択してください。</p>
 <p><img alt="s300-1" src="img/564ee6f6419cc8c0.png"></p>
 <h2>3-1. documentを新規作成する</h2>
 <p>document部分のみをコピーしてデベロッパーコンソールの［コードエディタ］タブをクリックしてから左上の新規ドキュメントアイコンをクリックして作成します。</p>
-<p><img alt="s301" src="img/c4cff1654847231.png"></p>
+<p><img alt="s301" src="img/b2dbcd7766815e5b.png"></p>
 <p>ファイル名を<code>apl_document.json</code>として［Create File］ボタンをクリックします。</p>
 <p><img alt="s302" src="img/e3042af02c81b42b.png"></p>
 <p>先程コピーしたコードを貼り付けます。貼り付けたら［Save］ボタン押します。</p>
-<p><img alt="s303" src="img/f0ddeca3b70aa41c.png"></p>
+<p><img alt="s303" src="img/ac8edf90fc9f883e.png"></p>
 <p>コードはこちら。<br><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_document.json</a></p>
 <pre><code>{
     &#34;type&#34;: &#34;APL&#34;,
@@ -381,7 +381,7 @@
 <h2>3-2. スキルプログラムを編集する</h2>
 <p>既にあるindex.jsファイルを開きます。6行目にある<code>LaunchRequestHandler</code>の関数を編集します。<br>addDirectiveという部分でAPLのdocumentを指定します。<br><br>datasourcesに中型デバイスで表示する文字列を指定します。</p>
 <p>コードを編集したら、［Save］と［Deploy］をクリックしてください。</p>
-<p><img alt="s304" src="img/b82bd520c7c7f52d.png"></p>
+<p><img alt="s304" src="img/75200d3d58cdd7a6.png"></p>
 <pre><code>const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === &#39;LaunchRequest&#39;;
@@ -407,20 +407,20 @@
 };
 </code></pre>
 <p>［テスト］タブをクリックしてシミュレーター画面を表示してください。シミュレーターで実行するとAPLが適用されたレイアウトを確認することができます。</p>
-<p><img alt="s305" src="img/f9de7e06411cdf9f.png"></p>
+<p><img alt="s305" src="img/f699e61ac33199e7.png"></p>
 <p>実機で確認もしてみてください。<br>Echo Spotだとますますドラゴ◯ボールっぽく見えますね</p>
 <p><img alt="s306" src="img/e08bde5ffaa4bf83.png"></p>
 <h2>3-3. Alexa-hostedのS3から画像を呼ぶ</h2>
 <p>Alexa-hostedにはS3も使えます。<br>コードエディタの左下にS3のリンクがあるのでクリックします。</p>
-<p><img alt="s310" src="img/5debe1866386586f.png"></p>
+<p><img alt="s310" src="img/7570e2930cb6cdbd.png"></p>
 <p>S3のページが表示されたら、画像をアップロードするので［アップロード］ボタンを押します。</p>
-<p><img alt="s311" src="img/5567efa80ecbd315.png"></p>
+<p><img alt="s311" src="img/a1619474beabfa18.png"></p>
 <p>お好きな画像でも良いですし、こちらのball.pngファイルでも構いません。<br>好きなファイルをアップロードしましょう。</p>
-<p><img alt="s312" src="img/18a15706416bc995.png"></p>
+<p><img alt="s312" src="img/6dc049a2f015149f.png"></p>
 <p>apl_document.jsonを開いて、34行目のsourceの値を変更します。<br><code>${payload.hello.ballImage}</code>に変えてください。</p>
-<p><img alt="s313" src="img/d093a2519031ff71.png"></p>
+<p><img alt="s313" src="img/e548ef51720cb88.png"></p>
 <p>index.jsも編集します。S3に保存している画像ファイルのURLを取得しましょう。</p>
-<p><img alt="s314" src="img/8d7605139424358f.png"></p>
+<p><img alt="s314" src="img/c5c356b10b485944.png"></p>
 <p>下記のように編集します。</p>
 <pre><code>const Alexa = require(&#39;ask-sdk-core&#39;);
 const Util = require(&#39;util.js&#39;);
@@ -459,13 +459,13 @@ const LaunchRequestHandler = {
     
       <google-codelab-step label="タッチ処理を実装しよう" duration="0">
         <p>画面タッチ処理を実装します。タッチしたらイベントを検知して数をカウントする<br><br>昔流行った「へぇボタン」を作ります。</p>
-<p><img alt="s400" src="img/92b4ce3e4a244119.png"></p>
+<p><img alt="s400" src="img/3aa333b54bf6e21a.png"></p>
 <h2>4-1. インテントを追加する</h2>
 <p>へぇボタンの画面を表示させるために、インテントを新規作成します。<br><br>［ビルド］タブをクリックして、インテントの［追加］ボタンをクリックして、インテント名を<code>HeeIntent</code>と入力します。［カスタムインテントを作成］ボタンをクリックして作成します。</p>
-<p><img alt="s401" src="img/22af714fc23b17a.png"></p>
+<p><img alt="s401" src="img/f434a7629d6de022.png"></p>
 <p>このインテントが反応するための言葉を登録します。サンプル発話に「へぇボタン」と入力して、<code>Enter</code>キーを押してください。</p>
 <p>最後に必ずインテントの［モデルを保存］ボタンと［モデルをビルド］ボタンをそれぞれクリックします。</p>
-<p><img alt="s402" src="img/69c2ba708420ce5d.png"></p>
+<p><img alt="s402" src="img/fd04ad348cd02008.png"></p>
 <h2>4-2. APLを実装する</h2>
 <p>APLのレイアウトを組み込みます。［コードエディタ］タブをクリックしてから、左上の新規ドキュメントアイコンをクリックして作成してください。<br><br>ファイル名は「apl_hee.json」としました。</p>
 <p><img alt="s403" src="img/269beebcd42df1ca.png"></p>
@@ -559,7 +559,7 @@ const LaunchRequestHandler = {
 </code></pre>
 <p><a href="https://developer.amazon.com/alexa/console/ask/displays" target="_blank">APLオーサリングツール</a>でこのコードを貼り付けると以下のようになります。<br><code>heeLayout</code>とありますが、自分でオリジナルのレイアウトを適用することができます。</p>
 <p>※実際にAPLオーサリングツールで試す場合はこちらのjsonファイルで試してください<br><a href="https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json" target="_blank">https://raw.githubusercontent.com/gaomar/apl_handson/master/files/apl_hee.json</a></p>
-<p><img alt="s404" src="img/3eb20cfcc23e5cbb.png"></p>
+<p><img alt="s404" src="img/7ee47ef9928d4678.png"></p>
 <p>typeの<code>Pager</code>で画面をスワイプするとへぇボタンのOFFとON画像が切り替わります。またOFF状態のへぇボタンをタッチできるように<code>TouchWrapper</code>を使います。</p>
 <h2>4-3. プログラムを修正する</h2>
 <p>APLを適用するためにindex.jsファイルを編集します。コードエディタからindex.jsを開いてください。</p>
