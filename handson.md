@@ -112,18 +112,17 @@ APLは初期状態では無効設定になっていますので、必ず使用�
 
 ![s222](images/s222.png)
 
-コードはこちらをコピペしてください。
+プロパティ値は以下の通りです。
 
-```javascript
-{
-    "type": "Image",
-    "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
-    "scale": "best-fill",
-    "width": "100vw",
-    "height": "100vh",
-    "position": "absolute"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|source|https://github.com/gaomar/apl_handson/raw/master/files/background.jpg |
+|height| 100vh|
+|position| absolute|
+|scale| best-fill  |
+|width| 100vw|
+
+
 
 このままだと最初に表示した文字列が背景より後ろになってしまうので、表示順番を入れ替えます。  
 三部分をドラッグしてImageを上にもっていきます。
@@ -139,17 +138,10 @@ APLは初期状態では無効設定になっていますので、必ず使用�
 
 コードを下記のように修正してみましょう。`overlayColor`というプロパティを追加します。
 
-```javascript
-{
-    "type": "Image",
-    "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
-    "scale": "best-fill",
-    "width": "100vw",
-    "height": "100vh",
-    "position": "absolute",
-    "overlayColor": "rgba(0, 0, 0, 0.6)"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|overlayColor| rgba(0, 0, 0, 0.6)|
+
 
 これで文字が見やすくなりました。わざわざオーバーレイカラーの画像を作成しなくてもこのプロパティを追記するだけで簡単に作れます。
 
@@ -209,16 +201,13 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 ![s245](images/s245.png)
 
 ### 2-8. 小型デバイスレイアウトを適用する
-追加した1つ目の`Container`を選択して、コードを編集します。
+追加した1つ目の`Container`を選択して、whenプロパティに値を設定します。
+
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|when| ${@viewportProfile == @hubRoundSmall} |
 
 ![s246](images/s246.png)
-
-```javascript
-{
-    "when": "${@viewportProfile == @hubRoundSmall}",
-    "type": "Container"
-}
-```
 
 レイアウト判定は`when`プロパティを使います。whenはif文みたいなものです。  
 判定のプロパティ値は下記の通りです。
@@ -234,93 +223,80 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 
 ![s247](images/s247.png)
 
-`Image`を選択して、コードを編集します。
+`Image`を選択して、プロパティ値を入れます
 
-```javascript
-{
-    "type": "Image",
-    "source": "https://github.com/gaomar/apl_handson/raw/master/files/ball.png",
-    "scale": "best-fill",
-    "width": "100vw",
-    "height": "100vh",
-    "position": "absolute"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|source|https://github.com/gaomar/apl_handson/raw/master/files/ball.png|
+|height| 100vh|
+|position| absolute|
+|scale| best-fill|
+|weight| 100vw|
+
 
 2つ目の`Container`をクリックして更に`Container`を追加します。
 
-できた`Container`を選択してコードを編集します。
+できた`Container`を選択してプロパティ値を設定します。
 
 ![s248](images/s248.png)
 
-```javascript
-{
-    "type": "Container",
-    "justifyContent": "center",
-    "height": "100vh"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|height| 100vh|
+|justifyContent| center|
+
 
 追加した`Container`を選択して、更に`Text`を追加します。
 
 ![s249](images/s249.png)
 
-```javascript
-{
-    "type": "Text",
-    "text": "★",
-    "textAlign": "center",
-    "fontSize": "20vh"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|text| ★|
+|fontSize| 20vh|
+|textAlign| center|
+
 
 ### 2-9. それ以外のレイアウトを適用する
 追加した一番下にある`Container`をクリックして、`Image`を追加します。
 
-`Image`を選択して、コードを編集します。
+`Image`を選択して、プロパティ値を設定します。
 
 ![s250](images/s250.png)
 
-```javascript
-{
-    "type": "Image",
-    "source": "https://github.com/gaomar/apl_handson/raw/master/files/background.jpg",
-    "scale": "best-fill",
-    "width": "100vw",
-    "height": "100vh",
-    "position": "absolute",
-    "overlayColor": "rgba(0, 0, 0, 0.6)"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|source|https://github.com/gaomar/apl_handson/raw/master/files/background.jpg|
+|height| 100vh|
+|overlayColor| rgba(0, 0, 0, 0.6)|
+|position| absolute|
+|scale| best-fill|
+|width| 100vw|
 
 一番下にある`Container`を選択して、更に`Container`を追加します。
 
-追加した`Container`を選択して、コードを編集します。
+追加した`Container`を選択して、プロパティ値を設定します。
 
 ![s251](images/s251.png)
 
-```javascript
-{
-    "type": "Container",
-    "justifyContent": "center",
-    "height": "100vh"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|height| 100vh|
+|justifyContent| center|
+
 
 一番下にある`Container`を選択して`Text`を追加します。
 
-追加した`Text`を選択してコードを編集します。
+追加した`Text`を選択してプロパティ値を設定します。
 
 ![s252](images/s252.png)
 
-```javascript
-{
-    "type": "Text",
-    "text": "${payload.hello.text}",
-    "textAlign": "center",
-    "fontSize": "5vh"
-}
-```
+| プロパティ   | 値    |
+|:-------------|:------------------|
+|text| ${payload.hello.text}|
+|fontSize| 5vh|
+|textAlign| center|
+
 
 最終的にこのようなレイアウトになれば完成です。
 
