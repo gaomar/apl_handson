@@ -114,7 +114,7 @@
 <h2>2-6. デバイスの判定プロファイルを適用する</h2>
 <p>Echo Spotはこのレイアウト、Echo Showではこのレイアウトという風に、デバイスに応じてレイアウトを変更することがあるかと思います。</p>
 <p>デバイスの判定は<code>alexa-viewport-profiles</code>というものをインポートすると判定することができます。</p>
-<p><img alt="s230" src="img/48e2849f089fa81f.png"></p>
+<p><img alt="s230" src="img/5643efdd4c26fc33.png"></p>
 <p>コード</p>
 <pre><code>{
     &#34;type&#34;: &#34;APL&#34;,
@@ -129,9 +129,12 @@
 }
 </code></pre>
 <h2>2-7. 小型デバイスレイアウトを追加する</h2>
-<p>小型デバイスのEcho Spot用のレイアウトを作ってみましょう。丸い形を活かしたデザインにします。<br><br>既にある<code>Image</code>を削除します。</p>
+<p>小型デバイスのEcho Spot用のレイアウトを作ってみましょう。丸い形を活かしたデザインにします。</p>
+<p>最終的にこのようなレイアウトになれば完成です。</p>
+<p><img alt="s253" src="img/8b20b0dfb122f131.png"></p>
+<p>既にある<code>Image</code>を削除します。</p>
 <p><img alt="s240" src="img/1e937b1855751ad5.png"></p>
-<p>出てきたポップアップで<code>Proceed</code>をクリックします。</p>
+<p>出てきたポップアップで<code>Proceed</code>をクリックします。これでImage要素が削除されます。</p>
 <p><img alt="s241" src="img/1d3bd1b8e1ea340d.png"></p>
 <p>次に2つ目の<code>Container</code>を選択して、ゴミ箱をクリックして削除します。</p>
 <p><img alt="s242" src="img/f8d296feb6b589cd.png"></p>
@@ -168,7 +171,7 @@
 </td><td colspan="1" rowspan="1"><p>超大型TV（Fire TVなど）</p>
 </td></tr>
 </table>
-<p>2つ目の<code>Container</code>をクリックして<code>Image</code>を追加します。</p>
+<p>2つ目の<code>Container</code>をクリックして選択します。その状態で、右上の［+］をクリックして<code>Image</code>を追加します。</p>
 <p><img alt="s247" src="img/9e89df0e2b046b24.png"></p>
 <p><code>Image</code>を選択して、プロパティ値を入れます</p>
 <table>
@@ -185,7 +188,7 @@
 <tr><td colspan="1" rowspan="1"><p>scale</p>
 </td><td colspan="1" rowspan="1"><p>best-fill</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>weight</p>
+<tr><td colspan="1" rowspan="1"><p>wight</p>
 </td><td colspan="1" rowspan="1"><p>100vw</p>
 </td></tr>
 </table>
@@ -453,6 +456,7 @@ const LaunchRequestHandler = {
 };
 </code></pre>
 <p>今まではGithub経由で呼び出していた画像が、これでAlexa-hostedのS3側にあるファイルから呼び出すことができました。</p>
+<p>実際に動いているかテストしてみましょう。</p>
 
 
       </google-codelab-step>

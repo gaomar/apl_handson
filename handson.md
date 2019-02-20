@@ -172,11 +172,16 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 
 ### 2-7. 小型デバイスレイアウトを追加する
 小型デバイスのEcho Spot用のレイアウトを作ってみましょう。丸い形を活かしたデザインにします。  
+
+最終的にこのようなレイアウトになれば完成です。
+
+![s253](images/s253.png)
+
 既にある`Image`を削除します。
 
 ![s240](images/s240.png)
 
-出てきたポップアップで`Proceed`をクリックします。
+出てきたポップアップで`Proceed`をクリックします。これでImage要素が削除されます。
 
 ![s241](images/s241.png)
 
@@ -219,7 +224,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 | hubLandscapeLarge |    大型デバイス（Echo Show 第２世代）        |
 | tvLandscapeXLarge |    超大型TV（Fire TVなど）        |
 
-2つ目の`Container`をクリックして`Image`を追加します。
+2つ目の`Container`をクリックして選択します。その状態で、右上の［+］をクリックして`Image`を追加します。
 
 ![s247](images/s247.png)
 
@@ -231,7 +236,7 @@ Echo Spotはこのレイアウト、Echo Showではこのレイアウトとい�
 |height| 100vh|
 |position| absolute|
 |scale| best-fill|
-|weight| 100vw|
+|wight| 100vw|
 
 
 2つ目の`Container`をクリックして更に`Container`を追加します。
@@ -531,6 +536,8 @@ const LaunchRequestHandler = {
 ```
 
 今まではGithub経由で呼び出していた画像が、これでAlexa-hostedのS3側にあるファイルから呼び出すことができました。
+
+実際に動いているかテストしてみましょう。
 
 ## タッチ処理を実装しよう
 画面タッチ処理を実装します。タッチしたらイベントを検知して数をカウントする  
